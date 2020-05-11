@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Update</title>
+    <link rel="stylesheet"  href="{% static 'customer_update.css' %}" />
+</head>
+<style type="text/css">
+
+</style>
+<body>
+<div class="title"> Please Update Customer here. </div>
+
+<form action='.' method="POST" οnsubmit="return false" align="left">{% csrf_token %}
+	<div id="list" align="left">
+	<p><label class="label_input">Customer</label> {{form.customer_relate}}</p>
+	<p><label class="label_input">Name</label> {{form.name}}</p>
+	<p><label class="label_input">Address</label> {{form.address}}</p>
+	<p><label class="label_input">Annual Income</label> {{form.cga_income}}</p>
+	<p><label class="label_input">Company</label> {{form.company}}</p>
+	
+	</div>
+	<div id="bt">
+		<input type="submit" value="Save" id="btn_save" />
+		<input type="submit" value="Back" id="btn_back" onclick="javascript:window.location.href='/customerlist'" />
+	</div>
+
+</form>
+</div>
+</body>
+</html>

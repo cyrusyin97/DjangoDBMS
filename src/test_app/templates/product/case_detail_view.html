@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="{% static 'case_detail.css' %}" />
+    <title>Case Detail</title>
+</head>
+
+<body>
+<div id="bt">
+    <input type="button" id="btn_insert" class="back" value="Back" onclick="javascrtpt:window.location.href='/caselist'"/>
+
+</div>
+<div id="list1" >
+    <table style="margin:auto">
+        <caption>Case Detail</caption>
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Summary</th>
+            <th scope="col">Satus</th>
+			<th scope="col">Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{case.CaseNo}}</td>
+            <td>{{case.summary}}</td>
+            <td>{{case.status}}</td>
+            <td>{{case.timeframe}}</td>
+        </tr>
+        </tbody>
+</div>
+
+<div id="list2" >
+    <table style="margin:auto"  class="fixed_header">
+        <caption>Customer&Employee</caption>
+        <thead>
+        <tr>
+            <th scope="col">Customer</th>
+            <th scope="col">Employee</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for instance in customer %}
+            <td><a href="/customerdetail?cid={{instance.cid}}">{{instance.cname}}</a></td>
+			{% endfor %}
+			{% for instance in employee %}
+			<td>{{instance.ename}}</td>
+			{% endfor %}
+        </tr>
+
+        </tbody>
+</div>
+
+<div id="list4" >
+    <table style="margin:auto"  class="fixed_header">
+        <caption>Product</caption>
+        {% for instance in product %}
+        <td>{{instance.pname}}</td>
+        {% endfor %}
+        </tr>
+        </tbody>
+</div>
+<div id="list4" >
+    <table style="margin:auto"  class="fixed_header">
+        <caption>Description</caption>
+        <td>{{case.cdescription}}</td>
+        </tr>
+        </tbody>
+</div>
+
+</body>
+</html>
+
+
+
+
+

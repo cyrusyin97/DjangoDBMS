@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Comment</title>
+    <link rel="stylesheet"  href="{% static 'casecomment_list.css' %}" />
+</head>
+<body>
+<div id="bt">
+    <input type="button" value="Add" id="btn_insert" onclick="javascrtpt:window.location.href='/casecommentcreate'" />
+    <input type="button" id="btn_insert" value="Back" onclick="javascrtpt:window.location.href='/home'"/>
+</div>
+<div id="list">
+    <table style="margin:auto">
+        <caption>Case Comment</caption>
+
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Time</th>
+            <th scope="col">Employee</th>
+            <th scope="col">Comment</th>
+    </tr>
+    </thead>
+  <tbody>
+    {% for instance in comment_info %}
+    <tr>
+        {% for item in instance.case %}
+            <td><a href="/casedetail?CaseNo={{item.CaseNo}}">{{item.CaseNo}}</a></td>
+        {% endfor %}
+        <td>{{instance.comment.time}}</td>
+        {% for item in instance.employee %}
+            <td>{{item.ename}}</td>
+        {% endfor %}
+        <td>{{instance.comment.comment}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+</body>
+</html>

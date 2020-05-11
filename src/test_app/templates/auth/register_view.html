@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="{% static 'register.css' %}" />
+    <title>Login</title>
+</head>
+
+<body>
+<div class="box"> Register </div>
+<div id="login_frame">
+ <form action='.' method="POST">{% csrf_token %}
+  <p><label class="label_input">Username:</label> {{form.username}}</p >
+  <p><label class="label_input">Email:</label> {{form.email}}</p >
+  <p><label class="label_input">Address:</label> {{form.address}}</p >
+  <p><label class="label_input">Phone:</label> {{form.phone}}</p >
+  <p><label class="label_input">Password:</label> {{form.password}}</p >
+
+  <div id="login_control">
+   <input type="submit" value="Register" id="btn_register"/>
+   <input type="button" value="Back" id="btn_back" onclick="javascrtpt:window.location.href='/home'"/>
+
+  </div>
+ </form>
+</div>
+
+</body>
+
+</html>

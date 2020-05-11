@@ -1,0 +1,92 @@
+body {
+
+    background-image:  url("/static/bkg1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#login_frame {
+   text-align: center;
+    border-radius: 20px;
+    width: 500px;
+    height: 350px;
+    margin: auto;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+form p > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.label_input {
+    font-size: 14px;
+    font-family: helveticaarial;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #FF4225;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.text_field {
+    width: 278px;
+    height: 28px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+}
+
+#btn_login {
+    font-size: 14px;
+    font-family: helveticaarial;
+    width: 200px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-left: -100px;
+}
+
+#btn_register {
+    font-size: 14px;
+    font-family: helveticaarial;
+    width: 200px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-left: 0px;
+}
+
+.box {
+       font-size: 50px;
+	   text-align:center;
+	   color: white;
+	   margin-top: 50px;
+		}
+#login_control {
+    text-align: center;
+    border-radius: 20px;
+    width: 500px;
+    height: 350px;
+    margin: auto;
+    position: absolute;
+    top:60%;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+}

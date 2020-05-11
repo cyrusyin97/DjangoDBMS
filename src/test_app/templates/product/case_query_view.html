@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case</title>
+    <link rel="stylesheet"  href="{% static 'case_query.css' %}" />
+    <script type="text/javascript" src="{% static 'case_query.js' %}"></script>
+</head>
+<body>
+
+
+<div id="bt">
+    <input type="button" value="Add" id="btn_insert" onclick="javascrtpt:window.location.href='/casecreate'" />
+    <input type="button" value="Update" id="btn_update" onclick="javascrtpt:window.location.href='/caseupdate'" />
+    <input type="button" id="back" class="back" value="Back" onclick="javascrtpt:window.location.href='/caselist'"/>
+</div>
+<div id="list" >
+    <table style="margin:auto"  class="fixed_header">
+        <caption>Case List</caption>
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">
+                <div class="dropdown">
+                    <button class="dropbtn">Status</button>
+                    <div class="dropdown-content">
+                        <a href="" id="status_true">True</a>
+                        <a href="" id="status_false">False</a>
+                        <a href="/caselist" id="status_all">All</a>
+                    </div>
+                </div>
+            </th>
+            <th scope="col">
+                <div class="dropdown">
+                    <button class="dropbtn">Time</button>
+                    <div class="dropdown-content">
+                        <a href="" id="datelink">Time Search</a><input type="date" id="dateinput">
+                        <a href="" id="bylatest">Order by Lastest</a>
+                        <a href="" id="byoldest">Order by Oldest</a>
+
+                    </div>
+            </th>
+            <th scope="col">
+            <div class="dropdown">
+                    <button class="dropbtn"><a href="/caseaggregation?by=customer">Customer</a></button>
+                    <div class="dropdown-content">
+                        <input type="text" name="" placeholder="Type to search" class="search-box" id="cus_input">
+                        <a href="" id="cus_search">Search</a>
+                    </div>
+            </th>
+            <th scope="col">
+            <div class="dropdown">
+                    <button class="dropbtn"><a href="/caseaggregation?by=company">Company</a></button>
+                    <div class="dropdown-content">
+                        <input type="text" name="" placeholder="Type to search" class="search-box" id="com_input">
+                        <a href="" id="com_search">Search</a>
+                    </div>
+            </th>
+            <th scope="col">
+            <div class="dropdown">
+                    <button class="dropbtn"><a href="/caseaggregation?by=employee">Employee</a></button>
+                    <div class="dropdown-content">
+                        <input type="text" name="" placeholder="Type to search" class="search-box" id="em_input">
+                        <a href="" id="em_search">Search</a>
+                    </div>
+            </th>
+        </tr>
+    </thead>
+        <tbody>
+        {% for instance in caseinfo %}
+        <tr>
+
+                <td><a href="/casedetail?CaseNo={{instance.case.CaseNo}}">{{instance.case.CaseNo}}</a></td>
+                <td>{{instance.case.status}}</td>
+                <td>{{instance.case.timeframe}}</td>
+
+            {% for item in instance.relate_customer %}
+                <td><a href="/customerdetail?cid={{item.cid}}">{{item.cname}}</a></td>
+                <td>{{item.company}}</td>
+            {% endfor %}
+            {% for item in instance.assign_employee %}
+                <td>{{item.ename}}</td>
+            {% endfor %}
+
+
+        </tr>
+{% endfor %}
+        </tbody>
+    </table>
+    <div id="P">
+    <input type="button" value="Group By Product" id="btn_GP" onclick="javascrtpt:window.location.href='/caseaggregation?by=product'" />
+    <input type="text" name="" placeholder="Product" class="search-box" id="prod_input">
+    <a href="" id="prod_search">Search</a>
+    </div>
+</div>
+</body>
+
+</html>
+
+
+

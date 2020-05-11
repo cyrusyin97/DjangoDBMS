@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="{% static 'login.css' %}" />
+    <title>Login</title>
+</head>
+
+<body>
+<div class="box"> Login </div>
+<div id="login_frame", margin="auto">
+    <form action='.' method="POST">{% csrf_token %}
+        <p><label class="label_input">Username:</label> {{form.username}}</p>
+        <p><label class="label_input">Password:</label> {{form.password}}</p>
+        <div id="login_control",margin="auto">
+            <input type="submit" value="Login" id="btn_login"/>
+            <input type="button" value="Register Now!" id="btn_register" onclick="javascrtpt:window.location.href='/register'" />
+        </div>
+    </form>
+</div>
+{% if messages %}
+        {% for message in messages %}
+        {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+        {% endfor %}
+{% endif %}
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Create</title>
+    <link rel="stylesheet"  href="{% static 'case_update.css' %}" />
+</head>
+<style type="text/css">
+
+</style>
+<body>
+<div class="title"> Please Create Product here. </div>
+
+<form action='.' method="POST" οnsubmit="return false" align="left">{% csrf_token %}
+	<div id="list" align="left">
+	<p><label class="label_input">Name</label> {{form.name}}</p>
+	<p><label class="label_input">Description</label> {{form.description}}</p>
+	<p><label class="label_input">Salesperson</label> {{form.salesperson}}</p>
+	</div>
+	<div id="bt">
+		<input type="submit" value="Save" id="btn_save" />
+		<input type="submit" value="Back" id="btn_back" onclick="javascript:window.location.href='/productlist'" />
+	</div>
+
+</form>
+</div>
+</body>
+</html>

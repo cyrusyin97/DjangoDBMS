@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resolution</title>
+    <link rel="stylesheet"  href="{% static 'product_list.css' %}" />
+    <script type="text/javascript" src="{% static 'resolution_query.js' %}"></script>
+</head>
+<body>
+<div id="bt">
+    <input type="button" value="Add" id="btn_insert" onclick="javascrtpt:window.location.href='/resolutioncreate'" />
+    <input type="button" id="btn_insert" class="back" value="Back" onclick="javascrtpt:window.location.href='/resolutionlist'"/>
+</div>
+<div id="list">
+    <table style="margin:auto">
+        <caption>Resolution List</caption>
+
+    <thead>
+        <tr>
+            <th scope="col">
+            <div class="dropdown">
+                    <button class="dropbtn">Product</button>
+                    <div class="dropdown-content">
+                        <input type="text" name="" placeholder="Type to search" class="search-box" id="pro_input">
+                        <a href="" id="pro_search">Search</a>
+                    </div>
+            </th>
+            <th scope="col">Resolution</th>
+            <th scope="col">Step</th>
+    </tr>
+    </thead>
+  <tbody>
+    {% for instance in resolution_list %}
+    <tr>
+        {% for item in r_product %}
+            <td>{{item.pname}}</td> 
+        {% endfor %}
+        <td>{{instance.cm_resolution}}</td>
+        <td>{{instance.step}}</td>
+        
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+</body>
+</html>

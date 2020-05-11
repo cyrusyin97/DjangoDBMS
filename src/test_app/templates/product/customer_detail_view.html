@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <link rel="stylesheet"  href="{% static 'customer_detail.css' %}" />
+</head>
+
+<body>
+    <div id="bt">
+    <input type="button" id="btn_insert" class="back" value="Back" onclick="javascrtpt:window.location.href='/customerlist'"/>
+    </div>
+<div id="login_frame">
+<div id="list1" >
+
+<table style="margin:auto"  class="fixed_header">
+        <caption>Customer Detail</caption>
+    <thead>
+        <tr>
+			<th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+			<th scope="col">Company</th>
+    </tr>
+    </thead>
+  <tbody>
+    <tr>
+        <td>{{customer.cid}}</a></td>
+        <td>{{customer.cname}}</td>
+        <td>{{customer.caddress}}</td>
+        <td>{{customer.company}}</td>
+    </tr>
+  </tbody>
+</div>
+
+<div id="list2" >
+<table style="margin:auto"  class="fixed_header">
+        <caption>Product Purchased</caption>
+  <tbody>
+    <tr>
+		{% for instance in product %}
+        <td>{{instance.pname}}</td>
+		{% endfor %}
+	</tr>
+  </tbody>
+</div>
+
+	<div id="list3" >
+<table style="margin:auto"  class="fixed_header">
+        <caption>Case Involved</caption>
+    <thead>
+        <tr>
+			<th scope="col">ID</th>
+            <th scope="col">Summary</th>
+            <th scope="col">Satus</th>
+			<th scope="col">Time</th>
+
+    </tr>
+    </thead>
+  <tbody>
+    <tr>
+		{% for instance in case %}
+        <td><a href="/casedetail?CaseNo={{instance.CaseNo}}">{{instance.CaseNo}}</a></td>
+        <td><a href="/casedetail?CaseNo={{instance.CaseNo}}">{{instance.summary}}</a></td>
+        <td>{{instance.status}}</td>
+        <td>{{instance.timeframe}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+	</div>
+</div>
+</body>
+</html>
+
+
+

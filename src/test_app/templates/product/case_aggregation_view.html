@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel="stylesheet"  href="{% static 'product_list.css' %}" />
+</head>
+<body>
+<div id="bt">
+    <input type="button" value="Back" id="btn_insert" onclick="javascrtpt:window.location.href='/caselist'" />
+</div>
+<div id="list">
+    <table style="margin:auto">
+        <caption>Aggregation Result</caption>
+
+    <thead>
+        <tr>
+            <th scope="col">Value</th>
+            <th scope="col">Case</th>
+    </tr>
+    </thead>
+  <tbody>
+  	
+    	{% for instance in info %}
+    	<tr>
+    		{% for item in instance.cust_case %}
+        		<td><a href="/customerdetail?cid={{instance.cust.cid}}">{{instance.cust.cname}}</a></td>
+        		<td><a href="/casedetail?CaseNo={{item.CaseNo}}">{{item.summary}}</a></td>
+        </tr>
+        	{% endfor %}
+    	
+    	{% endfor %}
+
+    	{% for instance in info %}
+    	<tr>
+    		{% for item in instance.com_case %}
+        		<td>{{instance.com}}</td>
+        		<td><a href="/casedetail?CaseNo={{item.CaseNo}}">{{item.summary}}</a></td>
+        </tr>
+        	{% endfor %}
+    	
+    	{% endfor %}
+
+    	{% for instance in info %}
+    	<tr>
+    		{% for item in instance.prod_case %}
+        		<td>{{instance.prod.pname}}</td>
+        		<td>{{item.summary}}</td>
+        </tr>
+        	{% endfor %}
+    	
+    	{% endfor %}
+
+    	{% for instance in info %}
+    	<tr>
+    		{% for item in instance.emp_case %}
+        		<td>{{instance.emp.ename}}</td>
+        		<td><a href="/casedetail?CaseNo={{item.CaseNo}}">{{item.summary}}</a></td>
+        </tr>
+        	{% endfor %}
+    	
+    	{% endfor %}
+    
+    
+    
+  </tbody>
+</table>
+</div>
+
+
+</body>
+</html>

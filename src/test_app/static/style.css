@@ -1,0 +1,366 @@
+
+body {
+    background-image:  url("/static/2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#login_frame {
+    width: 500px;
+    height: 150px;
+    padding: 13px;
+
+    position: absolute;
+    left: 44%;
+    top: 70%;
+    margin-left: -200px;
+    margin-top: -200px;
+
+    border-radius: 10px;
+    text-align: center;
+}
+#btn_customer {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 150px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+}
+#btn_product {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 150px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-left: 50px;
+}
+
+#btn_salesperson {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 150px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-top: 20px;
+
+}
+
+#btn_case {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 150px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 30;
+    margin-left: 50px;
+}
+
+#btn_casecm {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 150px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-top: 20px;
+
+}
+
+#btn_resolution {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 150px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-left: 50px;
+}
+.box {
+       font-size: 50px;
+       text-align:center;
+       color: white;
+       margin-top: 50px;
+        }
+
+.search-box{
+    position: absolute;
+    top:34%;
+    left:49%;
+    transform: translate(-50%,-50%);
+    background: white;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-box:hover>.search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+.search-box:hover>.search-btn{
+   background: white;
+}
+.search-btn{
+    color: #FF4225;
+    float:right ;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #FF4225;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+#bt {
+    width: 500px;
+    height: 150px;
+    padding: 13px;
+
+    position: absolute;
+    left: 44%;
+    top: 33%;
+    margin-left: -200px;
+    margin-top: -200px;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+#btn_insert {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 100px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #FF4225;
+    background-color: white;
+    border-radius: 6px;
+    border: 30;
+    margin-left: 20px;
+}
+
+#btn_delete{
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 100px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #FF4225;
+    background-color: white;
+    border-radius: 6px;
+    border: 30;
+    margin-left: 20px;
+}
+#btn_update{
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 100px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #FF4225;
+    background-color: white;
+    border-radius: 6px;
+    border: 30;
+    margin-left: 20px;
+
+}
+
+
+form p > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#image_logo {
+    margin-top: 22px;
+}
+
+.label_input {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.text_field {
+    width: 278px;
+    height: 28px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+}
+
+#btn_login {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-left: -190px;
+}
+
+#btn_register {
+    font-size: 14px;
+    font-family: helveticaarial;
+
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-left: 0px;
+}
+
+
+#forget_pwd {
+    font-size: 12px;
+    color: #FF5F46;
+    text-decoration: none;
+    position: relative;
+    float: right;
+    top: 5px;
+}
+
+#forget_pwd:hover {
+    color: blue;
+    text-decoration: underline;
+}
+.box {
+       font-size: 50px;
+       text-align:center;
+       color: white;
+       margin-top: 50px;
+        }
+#login_control {
+    padding: 0 28px;
+    left: 20%
+}
+
+table {
+     border-collapse: collapse;
+     font-family: helveticaarial;
+
+}
+
+caption {
+     font-weight: 700;
+     font-size: larger;
+     font-family: helveticaarial;
+     margin: 1em auto;
+
+}
+
+th,td {
+
+     padding: .65em;
+
+}
+
+th {
+     background: #ccc;
+   /* border: 1px solid #777; */
+   color: black;
+}
+
+td {
+     /* border: 1px solid #777; */
+}
+
+tbody tr:nth-child(even) {
+     background: #ccc;
+}
+
+th:first-child {
+     border-radius: 9px 0 0 0;
+}
+
+th:last-child {
+     border-radius: 0 9px 0 0;
+}
+
+tr:last-child td:first-child {
+     border-radius: 0 0 0 9px;
+}
+
+tr:last-child td:last-child {
+     border-radius: 0 0 9px 0;
+}

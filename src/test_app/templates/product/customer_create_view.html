@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Create</title>
+    <link rel="stylesheet"  href="{% static 'customer_create.css' %}" />
+</head>
+<body>
+	<div class="title"> Please create customer here. </div>
+
+<div id="list">
+<form action='.' method="POST" >{% csrf_token %}
+	<p><label class="label_input">Name</label> {{form.name}}</p>
+	<p><label class="label_input">Address</label> {{form.address}}</p>
+	<p><label class="label_input">Annual Income</label> {{form.cga_income}}</p>
+	<p><p><label class="label_input">Company</label> {{form.company}}</p>
+    <input type="submit" value="Save" id="btn_save"/>
+    <input type="submit" value="Back" id="btn_back" onclick="javascript:window.location.href='/customerlist'" />
+</form>
+</div>
+
+</body>
+</html>

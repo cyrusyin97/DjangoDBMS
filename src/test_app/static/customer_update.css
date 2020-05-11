@@ -1,0 +1,98 @@
+body {
+    background-image:  url("/static/2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+form p > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+#bt {
+   text-align: center;
+    border-radius: 20px;
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#list {
+    text-align: left;
+    border-radius: 20px;
+    width: 400px;
+    height: 350px;
+    margin: auto;
+    position: absolute;
+    top: 15%;
+    left: 36%;
+    bottom: 0;
+    float:left;
+    align: left;
+}
+
+.label_input {
+    font-size: 14px;
+    font-family: helveticaarial;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #FF4225;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#btn_save {
+    font-size: 14px;
+    font-family: helveticaarial;
+    width: 200px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-top: -15px;
+}
+#btn_back {
+    font-size: 14px;
+    font-family: helveticaarial;
+    width: 200px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #FF4225;
+    border-radius: 6px;
+    border: 0;
+    margin-top: -15px;
+}
+.text_field {
+    width: 278px;
+    height: 28px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+}
+.title {
+       font-size: 50px;
+       text-align:center;
+       color: white;
+       margin-top: 25px;
+        }
+.submit {
+       font-size: 50px;
+       text-align:center;
+       color: white;
+       margin: auto;
+       margin-top: 480px;
+        }
+        ul{
+    list-style-type: none;
+     text-align:left;
+align: left
+}

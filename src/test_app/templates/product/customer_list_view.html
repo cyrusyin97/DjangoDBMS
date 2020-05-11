@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <link rel="stylesheet"  href="{% static 'customer_list.css' %}" />
+    <script type="text/javascript" src="{% static 'customer_query.js' %}"></script>
+</head>
+
+<body>
+<div id="bt">
+    <input type="button" value="Add" id="btn_insert" onclick="javascrtpt:window.location.href='/customercreate'" />
+    <input type="button" value="Update" id="btn_update" onclick="javascrtpt:window.location.href='/customerupdate'"/>
+    <input type="button" id="back" class="back" value="Back" onclick="javascrtpt:window.location.href='/home'"/>
+</div>
+<div id="list" >
+    <table style="word-wrap:break-word"  class="fixed_header">
+        <caption>Customer List</caption>
+    <thead>
+        <tr>
+            <th scope="col">
+            <div class="dropdown">
+                    <button class="dropbtn">Name</button>
+                    <div class="dropdown-content">
+                        <input type="text" name="" placeholder="Type to search" class="search-box" id="cus_input">
+                        <a href="" id="cus_search">Search</a>
+                    </div></th>
+            <th scope="col">Address</th>
+            <th scope="col">
+            <div class="dropdown">
+                    <button class="dropbtn">Income</button>
+                    <div class="dropdown-content">
+                        <a href="" id="ascending">Ascending Order</a>
+                        <a href="" id="descending">Descending Order</a>
+                    </div>
+            </th>
+            <th scope="col">
+            <div class="dropdown">
+                    <button class="dropbtn">Company</button>
+                    <div class="dropdown-content">
+                        <input type="text" name="" placeholder="Type to search" class="search-box" id="com_input">
+                        <a href="" id="com_search">Search</a>
+                    </div>
+            </th>
+    </tr>
+    </thead>
+  <tbody>
+    {% for line in customer_list %}
+    <tr>
+        <td><a href="/customerdetail?cid={{line.cid}}">{{line.cname}}</a></td>
+        <td>{{line.caddress}}</td>
+        <td>{{line.cga_income}}</td>
+        <td>{{line.company}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

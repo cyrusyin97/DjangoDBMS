@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="{% static 'home.css' %}" />
+    
+    <title>SuccessLogIn</title>
+</head>
+
+<body>
+<div class="box">Please Select What You Want to Check </div>
+
+<div id="login_frame">
+    <input type="button" value="Customer" id="btn_customer" onclick="javascrtpt:window.location.href='/customerlist'" />
+    <input type="button" value="Product" id="btn_product" onclick="javascrtpt:window.location.href='/productlist'" />
+    <input type="button" value="Salesperson" id="btn_salesperson" onclick="javascrtpt:window.location.href='/salespersonlist'" />
+    <input type="button" value="Case" id="btn_case" onclick="javascrtpt:window.location.href='/caselist'" />
+    <input type="button" value="Case Comment" id="btn_casecm" onclick="javascrtpt:window.location.href='/casecommentlist'" />
+    <input type="button" value="Resolution" id="btn_resolution" onclick="javascrtpt:window.location.href='/resolutionlist'" />
+    <input type="button" value="Logout" id="btn_logout" onclick="javascrtpt:window.location.href='/logout'" />
+</div>
+</body>
+</html>

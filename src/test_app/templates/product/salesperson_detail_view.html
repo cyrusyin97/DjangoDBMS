@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="{% static 'salesperson_detail.css' %}" />
+    <title>Salesperosn</title>
+</head>
+
+<body>
+    <div id="bt">
+    <input type="button" id="btn_insert" class="back" value="Back" onclick="javascrtpt:window.location.href='/salespersonlist'"/>
+    </div>
+<div>
+<div id="list1" >
+    <table style="margin:auto">
+        <caption>Salesperson Detail</caption>
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+			<th scope="col">Job Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{salesperson.sid}}</td>
+            <td>{{salesperson.sname}}</td>
+            <td>{{salesperson.semail}}</td>
+            <td>{{salesperson.job_title}}</td>
+        </tr>
+        </tbody>
+</div>
+
+<div id="list2" >
+    <table style="margin:auto">
+        <caption>Product</caption>
+        {% for instance in product %}
+        <td>{{instance.pname}}</td>
+        {% endfor %}
+        </tr>
+        </tbody>
+</div>
+
+</div>
+</body>
+</html>

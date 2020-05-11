@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Create</title>
+    <link rel="stylesheet"  href="{% static 'case_create.css' %}" />
+</head>
+
+<body>
+<div class="title"> Please Create Case here. </div>
+
+<form action='.' method="POST" οnsubmit="return false" align="left">{% csrf_token %}
+	<div id="list" align="left">
+	<p><label class="label_input">Summary</label> {{form.summary}}</p>
+	<p><label class="label_input">Time</label> {{form.timeframe}}</p>
+	<p><label class="label_input">Customer</label> {{form.customer_relate}}</p>
+	<p><label class="label_input">Employee</label> {{form.employee_assign}}</p>
+	<p><label class="label_input">Status</label> {{form.status}}</p>
+	<p><label class="label_input">Description</label> {{form.description}}</p>
+	</div>
+	<div id="option" align="left">
+		<p><label class="label_input">Product</label> {{form.product_support}}</p>
+	</div>
+	<div id="bt">
+		<input type="submit" value="Save" id="btn_save" />
+		<input type="submit" value="Back" id="btn_back" onclick="javascript:window.location.href='/caselist'" />
+	</div>
+
+</form>
+</div>
+</body>
+</html>
